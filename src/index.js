@@ -3,10 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import List from './list'
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import store from './store';
+
+const App = (
+  <Provider store={store}>
+    <List />
+  </Provider>
+);
 
 ReactDOM.render(
   <React.StrictMode>
-    <List />
+    {App}
   </React.StrictMode>,
   document.getElementById('root')
 );
